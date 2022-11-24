@@ -3,6 +3,7 @@ package ru.gb.oseminar.service;
 import ru.gb.oseminar.data.Student;
 import ru.gb.oseminar.data.User;
 
+import javax.annotation.processing.Generated;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
