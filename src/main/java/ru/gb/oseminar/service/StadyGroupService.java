@@ -12,10 +12,4 @@ public class StadyGroupService{
     public StudyGroup getStudyGroup(Teacher teacher, List<User> list) {
        return this.studyGroup = new StudyGroup(teacher, list);
     }
-
-    public StadyGroupService(){
-        this.studyGroup = new StudyGroup(studyGroup.getTeacher(), studyGroup.getStudentList());
-    }
-
-
 }
