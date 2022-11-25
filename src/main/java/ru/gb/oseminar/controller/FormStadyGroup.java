@@ -5,17 +5,21 @@ import ru.gb.oseminar.data.StudyGroup;
 import ru.gb.oseminar.data.Teacher;
 import ru.gb.oseminar.data.User;
 import ru.gb.oseminar.service.StadyGroupService;
+import ru.gb.oseminar.view.StudyGroupView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class FormStadyGroup {
-    private List<Long> listID;
-    private Long teacherID;
-    private final StadyGroupService stadyGroupService = new StadyGroupService();
+    List<Long> listID = new ArrayList<>();
+    Long teacherID;
+    StadyGroupService stadyGroupService = new StadyGroupService();
+    StudyGroup studyGroup;
+    StudyGroupView studyGroupView = new StudyGroupView();
     public List<Long> GetStudentID(StudyGroup somGroup) {
         List<User> listStady = somGroup.getStudentList();
         for (User item : listStady) {
-            this.listID.add(((Student) item).getStudentID());
+            listID.add(((Student) item).getStudentID());
         }
         return this.listID;
     }
@@ -23,6 +27,9 @@ public class FormStadyGroup {
     public Long GetTeacherID(StudyGroup somGroup){
         teacherID = somGroup.getTeacher().getTeacherID();
         return this.teacherID;
-
+    }
+    public StudyGroup FormirateGroup(Teacher teacher, List<User> list){
+        studyGroupView.ShowStudyGroup(stadyGroupService.getStudyGroup(teacher, list));
+        return studyGroup = stadyGroupService.getStudyGroup(teacher, list);
     }
 }

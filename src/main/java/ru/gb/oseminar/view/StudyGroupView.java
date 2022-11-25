@@ -10,7 +10,7 @@ public class StudyGroupView {
         Logger logger = Logger.getLogger(StudyGroupView.class.getName());
         logger.info(studyGroup.toString());
     }
-    public void ShowStudyGroupID(List<StudyGroup> studyGroups){
+    public void ShowStudyGroup(List<StudyGroup> studyGroups){
         Logger logger = Logger.getLogger(StudyGroupView.class.getName());
         for (StudyGroup group: studyGroups) {
             logger.info(group.toString());
