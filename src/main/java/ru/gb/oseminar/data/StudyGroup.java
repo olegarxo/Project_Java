@@ -26,4 +26,12 @@ public class StudyGroup {
 
     private Teacher teacher;
     private List<User> studentList;
+
+    @Override
+    public String toString() {
+        return "StudyGroup{" +
+                "teacher=" + teacher +
+                ", studentList=" + studentList +
+                '}';
+    }
 }

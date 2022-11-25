@@ -10,19 +10,19 @@ import java.util.List;
 
 public class FormStadyGroup {
     private List<Long> listID;
+    private Long teacherID;
     private final StadyGroupService stadyGroupService = new StadyGroupService();
-    public List<Long> GetStudentID(StudyGroup somGroup){
+    public List<Long> GetStudentID(StudyGroup somGroup) {
         List<User> listStady = somGroup.getStudentList();
-        User Teacher = somGroup.getTeacher();
-        for (User item: listStady) {
-           this.listID.add(((Student) item).getStudentID());
+        for (User item : listStady) {
+            this.listID.add(((Student) item).getStudentID());
         }
         return this.listID;
-        public List<Long> GetStudentID(StudyGroup somGroup){
+    }
 
-        }
+    public Long GetTeacherID(StudyGroup somGroup){
+        teacherID = somGroup.getTeacher().getTeacherID();
+        return this.teacherID;
 
-
-        }
     }
 }
