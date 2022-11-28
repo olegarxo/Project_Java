@@ -11,11 +11,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FormStadyGroup {
-    List<Long> listID = new ArrayList<>();
-    Long teacherID;
-    StadyGroupService stadyGroupService = new StadyGroupService();
-    StudyGroup studyGroup;
-    StudyGroupView studyGroupView = new StudyGroupView();
+    private List<Long> listID = new ArrayList<>();
+    private Long teacherID;
+    private StadyGroupService stadyGroupService = new StadyGroupService();
+    private StudyGroup studyGroup;
+    private StudyGroupView studyGroupView = new StudyGroupView();
     public List<Long> GetStudentID(StudyGroup somGroup) {
         List<User> listStady = somGroup.getStudentList();
         for (User item : listStady) {
