@@ -1,8 +1,16 @@
 package ru.gb.oseminar.data;
 
 public class Student extends User{
-    Long studentID;
+    private Long studentID;
+    private int groupID;
 
+    public int getGroupID() {
+        return groupID;
+    }
+
+    public void setGroupID(int groupID) {
+        this.groupID = groupID;
+    }
     public long getStudentID() {
         return studentID;
     }

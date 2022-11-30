@@ -3,6 +3,7 @@ package ru.gb.oseminar.data;
 import java.util.List;
 
 public class StudyGroup {
+
     public StudyGroup(Teacher teacher, List<User> studentList) {
         this.teacher = teacher;
         this.studentList = studentList;
@@ -30,8 +31,8 @@ public class StudyGroup {
     @Override
     public String toString() {
         return "StudyGroup{" +
-                "teacher=" + teacher +
-                ", studentList=" + studentList +
-                '}';
+                "teacher= " + teacher +
+                ", studentList= " + studentList +
+                "} \n";
     }
 }
