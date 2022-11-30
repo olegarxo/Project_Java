@@ -24,7 +24,7 @@ public class StudyGroupView {
         for (User student: studentsList) {
             System.out.println(student.getFirstName()+ " " +
                     student.getSecondName() + " " +
-                    student.getPatronymic() + " - " + ((Student)student).getGroupID());
+                    student.getPatronymic() + " - " + ((Student)student).getGroupID() + " группа");
         }
     }
 
